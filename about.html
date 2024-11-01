@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Group 6 - Book Portal</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+        <style>
+            body{
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .table{
+                width: 70vw;
+                height: 90vh;
+                background-color: #fff5;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 .4rem .8rem #0005;
+                border-radius: .8rem;
+                overflow: auto;
+            }
+
+            .table::-webkit-scrollbar{
+                width: .5rem;
+                height: .5rem;
+            }
+
+            .table::-webkit-scrollbar-thumb{
+                border-radius: .5rem;
+                background-color: #0005;
+                visibility: hidden;
+            }
+
+            .table:hover::-webkit-scrollbar-thumb{
+                visibility: visible;
+            }
+
+            thead, th{
+                color: white;
+                position: sticky;
+                top: 0;
+                background-color: #FF4B2B/*#0005*/;
+            }
+            
+            td img{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                margin-right: .5rem;
+                vertical-align: middle;
+            }
+
+            table, th, td {
+                border-collapse: collapse;
+                padding: 1rem;
+            }
+
+            tbody tr:nth-child(odd){
+                background-color: #ffd4c2;
+            }
+
+            tbody tr:hover{
+                background-color: white;
+            }
+        </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+       
+            <div class="menu-icon" id="menuIcon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li>
+                    <a href="products.html"><i class="fas fa-book"></i> Products</a>
+                    </li>
+                    <li>
+                    <a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a> 
+                    </li>
+                    <li>
+                    <a href="registration.html"><i class="fas fa-user-plus"></i> Registration</a>
+                    </li>
+                    <li>
+                    <a href="clients.html"><i class="fas fa-users"></i> Our Clients</a>
+                    </li>
+                    <li>
+                    <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Skills</th>
+                </tr>
+                <tr>
+                    <td><img src="./images/avatars/ian.jpeg" alt="Member 1"></td>
+                    <td>AULE IAN</td>
+                    <td>auleian@gmail.com</td>
+                    <td>NETWORKING, CLOUD COMPUTING, LINUX, PYTHON, MYSQL</td>
+                </tr>
+                <tr>
+                    <td><img src="./images/avatars/Shuree.jpeg" alt="Member 2"></td>
+                    <td>ADAM SHUREE</td>
+                    <td>adamshuree@gmail.com</td>
+                    <td>UI/UX DESIGN</td>
+                </tr>
+                <tr>
+                    <td><img src="./images/avatars/nessim.jpeg" alt="Member 2"></td>
+                    <td>NTAMBI NESSIM SEWAYA</td>
+                    <td>ntambinessim@gmail.com</td>
+                    <td>CLOUD, PYTHON, JAVASCRIPT</td>
+                </tr>
+                <tr>
+                    <td><img src="./images/avatars/peter.jpeg" alt="Member 2"></td>
+                    <td>MULIZI BUKAMA PETER</td>
+                    <td>bulinzi@gmail.com</td>
+                    <td>PYTHON, JAVASCRIPT, NETWORKING</td>
+                </tr>
+                <tr>
+                    <td><img src="./images/avatars/musa.jpeg" alt="Member 2"></td>
+                    <td>SSERWADDA MUSA</td>
+                    <td>sserwadda@gmail.com</td>
+                    <td>HTML, CSS</td>
+                </tr>
+                <tr>
+                    <td><img src="./images/avatars/Aullah.jpeg" alt="Member 2"></td>
+                    <td>AULLAH ISMAIL JJUUKO</td>
+                    <td>aullahjjuuko@gmail.com</td>
+                    <td>UI/UX DESIGN</td>
+                </tr>
+                <tr>
+                    <td><img src="./images/avatars/sherinah.jpeg" alt="Member 2"></td>
+                    <td>NAKAWUKA OLIVER</td>
+                    <td>nakawuka@gmail.com</td>
+                    <td>MYSQL</td>
+                </tr>
+                <tr>
+                    <td><img src="./images/avatars/sherinah.jpeg" alt="Member 2"></td>
+                    <td>KYOBE GEORGE WILLIAM</td>
+                    <td>kyobewilliam@yahoo.com</td>
+                    <td>MYSQL</td>
+                </tr>
+            </table>
+        </div>
+        
+
+        <script>
+            const menuIcon = document.getElementById("menuIcon");
+            const navbar = document.getElementById("navbar");
+        
+            menuIcon.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+            menuIcon.classList.toggle("active");
+            });
+        
+            document.addEventListener("click", (event) => {
+            if (
+                !event.target.closest(".navbar") &&
+                !event.target.closest(".menu-icon") &&
+                navbar.classList.contains("active")
+            ) {
+                navbar.classList.remove("active");
+                menuIcon.classList.remove("active");
+            }
+            });
+        </script>
+    </body>
+</html>

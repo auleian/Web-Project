@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Group 6 - Book Portal</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+            <div class="menu-icon" id="menuIcon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li>
+                    <a href="products.html"><i class="fas fa-book"></i> Products</a>
+                    </li>
+                    <li>
+                    <a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a> 
+                    </li>
+                    <li>
+                    <a href="registration.html"><i class="fas fa-user-plus"></i> Registration</a>
+                    </li>
+                    <li>
+                    <a href="clients.html"><i class="fas fa-users"></i> Our Clients</a>
+                    </li>
+                    <li>
+                    <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header">
+                <div class="search">
+                    <input type="text" class="searchbar" placeholder="search..."/>
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+        
+            <div class="products_container">
+                <!-- Product 1 -->
+                <div class="books_container" id="products_1">
+                    <div class="card" id="card_1">
+                        <img src="./images/covers/book_1.jpg" alt="Book 1">
+                        <a href="order.html" class="order-link">Order</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/covers/book_2.jpg" alt="Book 2">
+                        <a href="order.html" class="order-link">Order</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/covers/book_3.jpg" alt="Book 3">
+                    <a href="order.html" class="order-link">Order</a>
+                    </div>   
+                </div>
+                <!-- Product 2 -->
+                <div class="books_container" id="products_2">
+                    <div class="card" id="card_2">
+                        <img src="./images/covers/book_4.jpg" alt="Book 4">
+                        <a href="order.html" class="order-link">Order</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/covers/book_5.jpg" alt="Book 5">
+                        <a href="order.html" class="order-link">Order</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/covers/book_6.jpg" alt="Book 6">
+                        <a href="order.html" class="order-link">Order</a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="books_container" id="products_3">
+                    <div class="card" >
+                        <img src="./images/covers/book_7.jpg" alt="Book 7">
+                        <a href="order.html" class="order-link">Order</a>
+                    </div>
+                    <div class="card" id="card_3">
+                        <img src="./images/covers/book_8.jpg" alt="Book 8">
+                        <a href="order.html" class="order-link">Order</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/covers/" alt="Book 9">
+                        <a href="order.html" class="order-link">Order</a>
+                    </div>
+                </div>
+            </div>
+   
+            <script>
+                const menuIcon = document.getElementById("menuIcon");
+                const navbar = document.getElementById("navbar");
+            
+                menuIcon.addEventListener("click", () => {
+                navbar.classList.toggle("active");
+                menuIcon.classList.toggle("active");
+                });
+            
+                document.addEventListener("click", (event) => {
+                if (
+                    !event.target.closest(".navbar") &&
+                    !event.target.closest(".menu-icon") &&
+                    navbar.classList.contains("active")
+                ) {
+                    navbar.classList.remove("active");
+                    menuIcon.classList.remove("active");
+                }
+                });
+            </script>
+    </body>
+</html>

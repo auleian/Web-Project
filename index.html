@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group 6 - Book Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="index-page">
+
+      <div class="head">
+        <div class="menu-icon" id="menuIcon">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <nav class="navbar" id="navbar">
+          <ul>
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="products.html"><i class="fas fa-book"></i> Products</a>
+            </li>
+            <li>
+              <a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a> 
+            </li>
+            <li>
+              <a href="registration.html"><i class="fas fa-user-plus"></i> Registration</a>
+            </li>
+            <li>
+              <a href="clients.html"><i class="fas fa-users"></i> Our Clients</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="home-upper">
+          <h1 class="welcome">Welcome to Group 6</h1>
+          <div class="search-container">
+            <input type="text" class="search-bar" placeholder="How may we help you today..."/>
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="quotes-container">
+        <div class="quote-box">
+          <p class="quote">
+            "In the highest civilization, the book is still the highest
+            delight..."
+          </p>
+          <p class="author">— Ralph Waldo Emerson</p>
+        </div>
+        <div class="quote-box">
+          <p class="quote">
+            "The best thing you can do for another is not just to share your
+            riches..."
+          </p>
+          <p class="author">— Søren Kierkegaard</p>
+        </div>
+        <div class="quote-box">
+          <p class="quote">
+            "Read not to contradict and confute, nor to believe and take for
+            granted..."
+          </p>
+          <p class="author">— Francis Bacon</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <script>
+      const menuIcon = document.getElementById("menuIcon");
+      const navbar = document.getElementById("navbar");
+
+      menuIcon.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+        menuIcon.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (event) => {
+        if (
+          !event.target.closest(".navbar") &&
+          !event.target.closest(".menu-icon") &&
+          navbar.classList.contains("active")
+        ) {
+          navbar.classList.remove("active");
+          menuIcon.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Group 6 - Book Portal</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        
+            <div class="menu-icon" id="menuIcon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li>
+                    <a href="products.html"><i class="fas fa-book"></i> Products</a>
+                    </li>
+                    <li>
+                    <a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a> 
+                    </li>
+                    <li>
+                    <a href="registration.html"><i class="fas fa-user-plus"></i> Registration</a>
+                    </li>
+                    <li>
+                    <a href="clients.html"><i class="fas fa-users"></i> Our Clients</a>
+                    </li>
+                    <li>
+                    <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="review-container">
+            <h2>Our Clients</h2>
+            <div class="reviews">
+              <ol style="list-style-type: upper-roman;">
+                <li class="review-item">
+                  <p class="review-name">
+                    <i class="fas fa-user user-icon"></i> Ian 
+                  </p>
+                  <p class="review-text">"This website is a book lover's paradise! I found an extensive collection of genres and authors that I never imagined would be in one place. The site is user-friendly and allows easy access to detailed reviews, making it simple to choose my next read. Highly recommend for anyone looking to explore new titles."</p>
+                  <p class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </li>
+                <li class="review-item">
+                  <p class="review-name">
+                    <i class="fas fa-user user-icon"></i> John 
+                  </p>
+                  <p class="review-text">"As an avid reader, I appreciate how well this platform is organized. It’s easy to navigate, and I can find books by genre, author, or popularity. The curated recommendations were spot-on and helped me discover new authors that I’ve thoroughly enjoyed. This site has quickly become my go-to for book browsing."</p>
+                  <p class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                </li>
+                <li class="review-item">
+                  <p class="review-name">
+                    <i class="fas fa-user user-icon"></i> Shamir
+                  </p>
+                  <p class="review-text">"I stumbled upon this website while searching for some classic novels, and it didn't disappoint! I love that it offers in-depth summaries and reviews, making it easier for me to decide which book to dive into next. However, I would love to see more diverse author recommendations in the future."</p>
+                  <p class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </li>
+                <li class="review-item">
+                  <p class="review-name">
+                    <i class="fas fa-user user-icon"></i> Ssekadde
+                  </p>
+                  <p class="review-text">"This site has been a great resource for discovering books and authors I hadn’t heard of before. The search options are flexible, and I enjoy the 'related books' section, which has led me to some unexpected finds. The site layout is modern and easy on the eyes, making browsing a pleasant experience!"</p>
+                  <p class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </li>
+                <li class="review-item">
+                  <p class="review-name">
+                    <i class="fas fa-user user-icon"></i> Bukenya
+                  </p>
+                  <p class="review-text">"I'm relatively new to reading for leisure, and this website made it easy to find recommendations. The beginner’s guides and top picks have helped me find books that resonate with my interests, and I appreciate the balance of classic and contemporary options. The reviews are honest and insightful, making each book feel like an informed choice."</p>
+                  <p class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+        <script>
+            const menuIcon = document.getElementById("menuIcon");
+            const navbar = document.getElementById("navbar");
+        
+            menuIcon.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+            menuIcon.classList.toggle("active");
+            });
+        
+            document.addEventListener("click", (event) => {
+            if (
+                !event.target.closest(".navbar") &&
+                !event.target.closest(".menu-icon") &&
+                navbar.classList.contains("active")
+            ) {
+                navbar.classList.remove("active");
+                menuIcon.classList.remove("active");
+            }
+            });
+        </script>
+    </body>
+</html>
