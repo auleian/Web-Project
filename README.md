@@ -1,6 +1,7 @@
 # Web-Project
 GROUP PROJECT
 Project details: 
+
 Create a web application that sells products or services of your choice. It should
 include the following web pages:
 a. About us
@@ -8,6 +9,7 @@ b. Products
 c. Order
 d. Registration
 e. Our clients
+
 All pages must have a vertical navigation bar created using CSS which enables the
 user to navigate to the various pages. Use appropriate colors and fonts as you see fit.
 The about us page should:
